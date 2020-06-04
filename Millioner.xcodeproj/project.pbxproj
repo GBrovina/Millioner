@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1516B02486BC8F00BB3DFA /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1516AF2486BC8F00BB3DFA /* Question.swift */; };
+		3C1516B22486CBF700BB3DFA /* GameGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1516B12486CBF700BB3DFA /* GameGround.swift */; };
+		3C1516B42488203200BB3DFA /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1516B32488203200BB3DFA /* Game.swift */; };
+		3C1516B62488210300BB3DFA /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1516B52488210300BB3DFA /* GameSession.swift */; };
 		3C76D8522486B0D1005B2214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C76D8512486B0D1005B2214 /* AppDelegate.swift */; };
 		3C76D8542486B0D1005B2214 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C76D8532486B0D1005B2214 /* SceneDelegate.swift */; };
-		3C76D8562486B0D1005B2214 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C76D8552486B0D1005B2214 /* ViewController.swift */; };
+		3C76D8562486B0D1005B2214 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C76D8552486B0D1005B2214 /* StartViewController.swift */; };
 		3C76D8592486B0D1005B2214 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C76D8572486B0D1005B2214 /* Main.storyboard */; };
 		3C76D85B2486B0D5005B2214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C76D85A2486B0D5005B2214 /* Assets.xcassets */; };
 		3C76D85E2486B0D5005B2214 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C76D85C2486B0D5005B2214 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C1516AF2486BC8F00BB3DFA /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		3C1516B12486CBF700BB3DFA /* GameGround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGround.swift; sourceTree = "<group>"; };
+		3C1516B32488203200BB3DFA /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		3C1516B52488210300BB3DFA /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		3C76D84E2486B0D1005B2214 /* Millioner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millioner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C76D8512486B0D1005B2214 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C76D8532486B0D1005B2214 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3C76D8552486B0D1005B2214 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3C76D8552486B0D1005B2214 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		3C76D8582486B0D1005B2214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C76D85A2486B0D5005B2214 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C76D85D2486B0D5005B2214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,13 +64,17 @@
 		3C76D8502486B0D1005B2214 /* Millioner */ = {
 			isa = PBXGroup;
 			children = (
+				3C1516AF2486BC8F00BB3DFA /* Question.swift */,
 				3C76D8512486B0D1005B2214 /* AppDelegate.swift */,
 				3C76D8532486B0D1005B2214 /* SceneDelegate.swift */,
-				3C76D8552486B0D1005B2214 /* ViewController.swift */,
+				3C76D8552486B0D1005B2214 /* StartViewController.swift */,
+				3C1516B12486CBF700BB3DFA /* GameGround.swift */,
 				3C76D8572486B0D1005B2214 /* Main.storyboard */,
 				3C76D85A2486B0D5005B2214 /* Assets.xcassets */,
 				3C76D85C2486B0D5005B2214 /* LaunchScreen.storyboard */,
 				3C76D85F2486B0D5005B2214 /* Info.plist */,
+				3C1516B32488203200BB3DFA /* Game.swift */,
+				3C1516B52488210300BB3DFA /* GameSession.swift */,
 			);
 			path = Millioner;
 			sourceTree = "<group>";
@@ -138,7 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C76D8562486B0D1005B2214 /* ViewController.swift in Sources */,
+				3C1516B22486CBF700BB3DFA /* GameGround.swift in Sources */,
+				3C1516B42488203200BB3DFA /* Game.swift in Sources */,
+				3C76D8562486B0D1005B2214 /* StartViewController.swift in Sources */,
+				3C1516B02486BC8F00BB3DFA /* Question.swift in Sources */,
+				3C1516B62488210300BB3DFA /* GameSession.swift in Sources */,
 				3C76D8522486B0D1005B2214 /* AppDelegate.swift in Sources */,
 				3C76D8542486B0D1005B2214 /* SceneDelegate.swift in Sources */,
 			);

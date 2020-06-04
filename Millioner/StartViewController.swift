@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func startGame(_ sender: Any) {
+        let newGameSession = GameSession()
+        Game.shared.gameSession = newGameSession
+    }
+    @IBAction func result(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
