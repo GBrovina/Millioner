@@ -10,22 +10,15 @@ import Foundation
 import UIKit
 
 
-class GameSession{
-    var questionQuantity:Int!
-    var rightAnswerQuantity:Int!
+class GameSession:Codable{
+    var questionQuantity:Int
+    var rightAnswerQuantity:Int
     
-    
+    init(questionQuantity:Int,rightAnswerQuantity:Int) {
+        self.questionQuantity = questionQuantity
+        self.rightAnswerQuantity = rightAnswerQuantity
+    }
 
     
 }
-extension GameSession:informationDelagate{
-    
-    func question(_ question: Int) {
-        self.questionQuantity = question
-        print (question)
-    }
-    
-    func bringInformation(_ quantity: Int) {
-        self.rightAnswerQuantity = quantity
-    }
-}
+
