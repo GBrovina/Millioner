@@ -16,7 +16,7 @@ class Game:Codable{
     
     var results:[Int] = []
     func persent(_ result:GameSession){
-        let percent = (self.gameSession?.rightAnswerQuantity ?? 1 * 100) / (self.gameSession?.questionQuantity ?? 1)
+        let percent = (self.gameSession?.rightAnswerQuantity ?? 1)*100 / (self.gameSession?.questionQuantity ?? 1)
         print(percent)
         results.append(percent)
         print("Percent was found")

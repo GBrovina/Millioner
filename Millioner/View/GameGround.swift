@@ -27,46 +27,53 @@ class GameGround: UIViewController{
     
     @IBAction func buttonFirst(_ sender: Any) {
         if answerNumber != 0{
-            goToTheStart(gameSession!)
+            self.dismiss(animated: true, completion: nil)
             }else{
             goNext()
             rightChoise += 1
+            gameSession?.rightAnswerQuantity = rightChoise
+            Game.shared.persent(gameSession!)
         }
     }
     @IBAction func buttonSecond(_ sender: Any) {
         if answerNumber != 1{
-             goToTheStart(gameSession!)
+            self.dismiss(animated: true, completion: nil)
             }else{
             goNext()
             rightChoise += 1
+            gameSession?.rightAnswerQuantity = rightChoise
+            Game.shared.persent(gameSession!)
                }
     }
     @IBAction func buttonTrird(_ sender: Any) {
         if answerNumber != 2{
-            goToTheStart(gameSession!)
+            self.dismiss(animated: true, completion: nil)
             }else{
             goNext()
             rightChoise += 1
+            gameSession?.rightAnswerQuantity = rightChoise
+            Game.shared.persent(gameSession!)
                }
     }
     @IBAction func buttonFours(_ sender: Any) {
         if answerNumber != 2{
-          goToTheStart(gameSession!)
+            self.dismiss(animated: true, completion: nil)
                }else{
             goNext()
             rightChoise += 1
+            gameSession?.rightAnswerQuantity = rightChoise
+            Game.shared.persent(gameSession!)
                }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gameDelegate = self
        
         questions = [Questions(questions:"Что не бывает морским?" , answer:["рельс","огурец","гребешок","узел"], rightAnswers:0),
                      Questions(questions:"В какой стране появилась мандолина?", answer:["Испания","Италия","Венгрия","Греция"], rightAnswers:1),
                      Questions(questions:"Где в древней греции можно было увидеть надпись:Здесь живут мертвые и говорят немые?", answer:["на кладбищах","в больницах","в библиотеках","в тюрьмах"], rightAnswers:2),
-                    Questions(questions:"Какой химический элемент назван в честь злого подземного гнома?", answer:["Гафний","Кобальт","Бериллий","Теллур"], rightAnswers:2)
+                    Questions(questions:"Какой химический элемент назван в честь злого подземного гнома?", answer:["Гафний","Теллур","Бериллий","Кобальт"], rightAnswers:3)
                     ]
         goNext()
         gameSession = GameSession(questionQuantity: questions.count, rightAnswerQuantity: rightChoise)
@@ -95,12 +102,4 @@ class GameGround: UIViewController{
         // Pass the selected object to the new view controller.
     }
     */
-}
-extension GameGround:Delegate{
-    func goToTheStart(_ gameSession: GameSession) {
-        Game.shared.persent(gameSession)
-        Game.shared.clearResult()
-//        self.gameDelegate?.goToTheStart(gameSession)
-        self.dismiss(animated: true, completion: nil)
-    }
 }

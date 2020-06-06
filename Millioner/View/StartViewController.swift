@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         if segue.identifier == "startSegue" {
             guard let destination = segue.destination as? GameGround else {return}
             destination.gameDelegate = self
+            destination.rightChoise = 0
         }
     }
 }
@@ -30,7 +31,6 @@ extension ViewController:Delegate{
     func goToTheStart(_ gameSession: GameSession) {
         Game.shared.persent(gameSession)
         Game.shared.clearResult()
-        self.dismiss(animated: true, completion: nil)
     }
     
     

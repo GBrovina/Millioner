@@ -47,6 +47,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C1516B9248BE88B00BB3DFA /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				3C1516B52488210300BB3DFA /* GameSession.swift */,
+				3C1516B32488203200BB3DFA /* Game.swift */,
+				3C1516AF2486BC8F00BB3DFA /* Question.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		3C1516BA248BE8BD00BB3DFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C76D8552486B0D1005B2214 /* StartViewController.swift */,
+				3C1516B12486CBF700BB3DFA /* GameGround.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3C76D8452486B0D1005B2214 = {
 			isa = PBXGroup;
 			children = (
@@ -66,17 +85,14 @@
 		3C76D8502486B0D1005B2214 /* Millioner */ = {
 			isa = PBXGroup;
 			children = (
-				3C1516AF2486BC8F00BB3DFA /* Question.swift */,
+				3C1516BA248BE8BD00BB3DFA /* View */,
+				3C1516B9248BE88B00BB3DFA /* Objects */,
 				3C76D8512486B0D1005B2214 /* AppDelegate.swift */,
 				3C76D8532486B0D1005B2214 /* SceneDelegate.swift */,
-				3C76D8552486B0D1005B2214 /* StartViewController.swift */,
-				3C1516B12486CBF700BB3DFA /* GameGround.swift */,
 				3C76D8572486B0D1005B2214 /* Main.storyboard */,
 				3C76D85A2486B0D5005B2214 /* Assets.xcassets */,
 				3C76D85C2486B0D5005B2214 /* LaunchScreen.storyboard */,
 				3C76D85F2486B0D5005B2214 /* Info.plist */,
-				3C1516B32488203200BB3DFA /* Game.swift */,
-				3C1516B52488210300BB3DFA /* GameSession.swift */,
 				3C1516B7248B910000BB3DFA /* GameCaretaker.swift */,
 			);
 			path = Millioner;
