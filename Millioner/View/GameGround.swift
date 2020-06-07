@@ -73,13 +73,12 @@ class GameGround: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        questions = [Questions(questions:"Что не бывает морским?",answer:["рельс","огурец","гребешок","узел"], rightAnswers:0),Questions(questions:"В какой стране появилась мандолина?", answer:["Испания","Италия","Венгрия","Греция"], rightAnswers:1),Questions(questions:"Где в древней греции можно было увидеть надпись:Здесь живут мертвые и говорят немые?", answer:["на кладбищах","в больницах","в библиотеках","в тюрьмах"],rightAnswers:2),Questions(questions:"Какой химический элемент назван в честь злого подземного гнома?", answer:["Гафний","Теллур","Бериллий","Кобальт"], rightAnswers:3)]
+        
+        questions = [Questions(questions: "Что не бывает морским?", answer: ["рельс","огурец","гребешок","узел"], rightAnswers: 0),Questions(questions: "В какой стране появилась мандолина?", answer: ["Испания","Италия","Венгрия","Греция"], rightAnswers: 1),Questions(questions: "Где в древней греции можно было увидеть надпись:Здесь живут мертвые и говорят немые?", answer: ["на кладбищах","в больницах","в библиотеках","в тюрьмах"], rightAnswers: 2),Questions(questions: "Какой химический элемент назван в честь злого подземного гнома?", answer: ["Гафний","Теллур","Бериллий","Кобальт"], rightAnswers: 3)]
+       gameSession = GameSession(questionQuantity: questions.count, rightAnswerQuantity: rightChoise)
+       Game.shared.gameSession = gameSession
         goNext()
-        gameSession = GameSession(questionQuantity: questions.count, rightAnswerQuantity: rightChoise)
-        print(questions.count)
-        print(rightChoise)
-        Game.shared.gameSession = gameSession
+
         
         // Do any additional setup after loading the view.
     }
