@@ -14,6 +14,11 @@
 		3C1516B8248B910000BB3DFA /* GameCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1516B7248B910000BB3DFA /* GameCaretaker.swift */; };
 		3C1516BC248D570900BB3DFA /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1516BB248D570900BB3DFA /* ResultTableViewController.swift */; };
 		3C1516BE248D585B00BB3DFA /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1516BD248D585B00BB3DFA /* ResultTableViewCell.swift */; };
+		3C1516C1248D7CE700BB3DFA /* Strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1516C0248D7CE700BB3DFA /* Strategy.swift */; };
+		3C1516C3248D7DFD00BB3DFA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1516C2248D7DFD00BB3DFA /* SettingsViewController.swift */; };
+		3C1516C5248D84CB00BB3DFA /* QuestionStategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1516C4248D84CB00BB3DFA /* QuestionStategy.swift */; };
+		3C1516C7248D881A00BB3DFA /* NormalStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1516C6248D881A00BB3DFA /* NormalStrategy.swift */; };
+		3C1516C9248D89B900BB3DFA /* RandomStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1516C8248D89B900BB3DFA /* RandomStrategy.swift */; };
 		3C76D8522486B0D1005B2214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C76D8512486B0D1005B2214 /* AppDelegate.swift */; };
 		3C76D8542486B0D1005B2214 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C76D8532486B0D1005B2214 /* SceneDelegate.swift */; };
 		3C76D8562486B0D1005B2214 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C76D8552486B0D1005B2214 /* StartViewController.swift */; };
@@ -30,6 +35,11 @@
 		3C1516B7248B910000BB3DFA /* GameCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCaretaker.swift; sourceTree = "<group>"; };
 		3C1516BB248D570900BB3DFA /* ResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
 		3C1516BD248D585B00BB3DFA /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		3C1516C0248D7CE700BB3DFA /* Strategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strategy.swift; sourceTree = "<group>"; };
+		3C1516C2248D7DFD00BB3DFA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3C1516C4248D84CB00BB3DFA /* QuestionStategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStategy.swift; sourceTree = "<group>"; };
+		3C1516C6248D881A00BB3DFA /* NormalStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalStrategy.swift; sourceTree = "<group>"; };
+		3C1516C8248D89B900BB3DFA /* RandomStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomStrategy.swift; sourceTree = "<group>"; };
 		3C76D84E2486B0D1005B2214 /* Millioner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millioner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C76D8512486B0D1005B2214 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C76D8532486B0D1005B2214 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,12 +74,24 @@
 		3C1516BA248BE8BD00BB3DFA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3C1516C2248D7DFD00BB3DFA /* SettingsViewController.swift */,
 				3C76D8552486B0D1005B2214 /* StartViewController.swift */,
 				3C1516B12486CBF700BB3DFA /* GameGround.swift */,
 				3C1516BB248D570900BB3DFA /* ResultTableViewController.swift */,
 				3C1516BD248D585B00BB3DFA /* ResultTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3C1516BF248D7B7D00BB3DFA /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				3C1516C0248D7CE700BB3DFA /* Strategy.swift */,
+				3C1516C4248D84CB00BB3DFA /* QuestionStategy.swift */,
+				3C1516C6248D881A00BB3DFA /* NormalStrategy.swift */,
+				3C1516C8248D89B900BB3DFA /* RandomStrategy.swift */,
+			);
+			path = Strategy;
 			sourceTree = "<group>";
 		};
 		3C76D8452486B0D1005B2214 = {
@@ -91,6 +113,7 @@
 		3C76D8502486B0D1005B2214 /* Millioner */ = {
 			isa = PBXGroup;
 			children = (
+				3C1516BF248D7B7D00BB3DFA /* Strategy */,
 				3C1516BA248BE8BD00BB3DFA /* View */,
 				3C1516B9248BE88B00BB3DFA /* Objects */,
 				3C76D8512486B0D1005B2214 /* AppDelegate.swift */,
@@ -180,11 +203,16 @@
 				3C1516B8248B910000BB3DFA /* GameCaretaker.swift in Sources */,
 				3C76D8562486B0D1005B2214 /* StartViewController.swift in Sources */,
 				3C1516B02486BC8F00BB3DFA /* Question.swift in Sources */,
+				3C1516C7248D881A00BB3DFA /* NormalStrategy.swift in Sources */,
+				3C1516C1248D7CE700BB3DFA /* Strategy.swift in Sources */,
 				3C1516BC248D570900BB3DFA /* ResultTableViewController.swift in Sources */,
 				3C1516B62488210300BB3DFA /* GameSession.swift in Sources */,
+				3C1516C9248D89B900BB3DFA /* RandomStrategy.swift in Sources */,
+				3C1516C5248D84CB00BB3DFA /* QuestionStategy.swift in Sources */,
 				3C76D8522486B0D1005B2214 /* AppDelegate.swift in Sources */,
 				3C1516BE248D585B00BB3DFA /* ResultTableViewCell.swift in Sources */,
 				3C76D8542486B0D1005B2214 /* SceneDelegate.swift in Sources */,
+				3C1516C3248D7DFD00BB3DFA /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

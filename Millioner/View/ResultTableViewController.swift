@@ -36,7 +36,8 @@ class ResultTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ResultTableViewCell
-        let result = Game.shared.results[indexPath.row]
+        let result = RecordsCaretaker().loadResults()[indexPath.row]
+//            Game.shared.results[indexPath.row]
         
         cell.result.text = "Результат игры: \(result) %"
 

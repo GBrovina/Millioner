@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartViewController: UIViewController {
+    
+    var difficaltyChoise:Difficulty?
 
     @IBAction func startGame(_ sender: Any) {
     }
@@ -24,10 +26,11 @@ class ViewController: UIViewController {
             guard let destination = segue.destination as? GameGround else {return}
             destination.gameDelegate = self
             destination.rightChoise = 0
+            destination.difficalty = self.difficaltyChoise
         }
     }
 }
-extension ViewController:Delegate{
+extension StartViewController:Delegate{
     func goToTheStart(_ gameSession: GameSession) {
         Game.shared.persent(gameSession)
         Game.shared.clearResult()

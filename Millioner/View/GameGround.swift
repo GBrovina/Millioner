@@ -12,6 +12,10 @@ protocol Delegate:class{
     func goToTheStart(_ gameSession:GameSession)
 }
 
+protocol QuestionStategy:class {
+    func showArrayOfQuestions(_ questions: [Questions]) -> [Questions]
+}
+
 class GameGround: UIViewController{
 
     private var questions = [Questions]()
@@ -20,6 +24,18 @@ class GameGround: UIViewController{
     weak var gameDelegate:Delegate?
     var gameSession:GameSession?
     var rightChoise:Int = 0
+    var difficalty:Difficulty?
+    
+    var questionsD:QuestionStategy{
+        switch self.difficalty {
+        case .normal:
+            return NormalStrategy()
+        case .random:
+            return RandomStrategy()
+        default:
+            return NormalStrategy()
+        }
+    }
     
     
     @IBOutlet weak var questionText: UITextView!
@@ -27,46 +43,50 @@ class GameGround: UIViewController{
     
     @IBAction func buttonFirst(_ sender: Any) {
         if answerNumber != 0{
+            RecordsCaretaker().saveResults(Game.shared.results)
             self.dismiss(animated: true, completion: nil)
             }else{
             goNext()
             rightChoise += 1
             gameSession?.rightAnswerQuantity = rightChoise
             Game.shared.persent(gameSession!)
-            RecordsCaretaker().saveResults(Game.shared.results)
+//            RecordsCaretaker().saveResults(Game.shared.results)
         }
     }
     @IBAction func buttonSecond(_ sender: Any) {
         if answerNumber != 1{
+            RecordsCaretaker().saveResults(Game.shared.results)
             self.dismiss(animated: true, completion: nil)
             }else{
             goNext()
             rightChoise += 1
             gameSession?.rightAnswerQuantity = rightChoise
             Game.shared.persent(gameSession!)
-            RecordsCaretaker().saveResults(Game.shared.results)
+//            RecordsCaretaker().saveResults(Game.shared.results)
                }
     }
     @IBAction func buttonTrird(_ sender: Any) {
         if answerNumber != 2{
+            RecordsCaretaker().saveResults(Game.shared.results)
             self.dismiss(animated: true, completion: nil)
             }else{
             goNext()
             rightChoise += 1
             gameSession?.rightAnswerQuantity = rightChoise
             Game.shared.persent(gameSession!)
-            RecordsCaretaker().saveResults(Game.shared.results)
+//            RecordsCaretaker().saveResults(Game.shared.results)
                }
     }
     @IBAction func buttonFours(_ sender: Any) {
-        if answerNumber != 2{
+        if answerNumber != 2 {
+            RecordsCaretaker().saveResults(Game.shared.results)
             self.dismiss(animated: true, completion: nil)
                }else{
             goNext()
             rightChoise += 1
             gameSession?.rightAnswerQuantity = rightChoise
             Game.shared.persent(gameSession!)
-            RecordsCaretaker().saveResults(Game.shared.results)
+//            RecordsCaretaker().saveResults(Game.shared.results)
                }
     }
     
@@ -75,8 +95,10 @@ class GameGround: UIViewController{
         super.viewDidLoad()
         
         questions = [Questions(questions: "Что не бывает морским?", answer: ["рельс","огурец","гребешок","узел"], rightAnswers: 0),Questions(questions: "В какой стране появилась мандолина?", answer: ["Испания","Италия","Венгрия","Греция"], rightAnswers: 1),Questions(questions: "Где в древней греции можно было увидеть надпись:Здесь живут мертвые и говорят немые?", answer: ["на кладбищах","в больницах","в библиотеках","в тюрьмах"], rightAnswers: 2),Questions(questions: "Какой химический элемент назван в честь злого подземного гнома?", answer: ["Гафний","Теллур","Бериллий","Кобальт"], rightAnswers: 3)]
+      questions = questionsD.showArrayOfQuestions(questions)
        gameSession = GameSession(questionQuantity: questions.count, rightAnswerQuantity: rightChoise)
        Game.shared.gameSession = gameSession
+        RecordsCaretaker().saveGameSession(gameSession!)
         goNext()
 
         
